@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>Hunnit!: A Coding Project By Jason Dodds</title>
+    <title>Loan Shark: A Coding Project By Jason Dodds</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +23,7 @@
 <!-------------------nav section------------------>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/jdicon.png" class="d-inline-block align-text-top" width="25" height="25">Hunnit!</a>
+        <a class="navbar-brand" href="#"><img src="img/jdicon.png" class="d-inline-block align-text-top" width="25" height="25">Loan SHark</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="app.html">Hunnit!</a>
+                    <a class="nav-link active" aria-current="page" href="app.html">Loan Shark</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="code.html">The Code</a>
@@ -53,10 +53,103 @@
 
 <!-------------------main section----------------->
 <main class="flex-shrink-0">
-    <div class="container">
+    <div id="container">
+	
+		
+		
+		<hr/>
+		
+		<h2>Loan Shark</h2>
+		
+		
+		
+		<div id="loan_src">  <!-- loan form will be here -->
+		
+			<form name="loan_form">
+			
+				<table style="margin:10px;">
+				
+					<tr>
+						<td>Loan Amount:</td>
+						<td><input type="text" id='loan_amt' name="loan_amt" size="10" class="inputs"/></td>
+					</tr>
+					
+					<tr>
+						<td>Number of Months:</td>
+						<td><input type="text" id='months' name="months" size="10" class="inputs"/></td>
+					</tr>
+					
+					<tr>
+						<td>Annual Interest Rate: <br/><span style="font-size:80%">(ex. 4.5% = 4.5)</span></td>
+						<td><input type="text" id="rate" name="rate" size="10" class="inputs"/></td>
+					</tr>
+					
+					<tr>
+						<td>Extra Monthly Payment:</td>
+						<td><input type="text" id='extra' name="extra" size="10" value="0" class="inputs"/></td>
+					</tr>
+				
+					<tr>
+						<td><input type="button" id='submit' onclick="validate()" value="Calculate" class="input"/></td>
+						<td><input type="button" id='reset' onclick="startOver()" value="Start Over" class="input" /></td>
+					</tr>
+				
+				
+				</table>
+			
+			
+			</form>
+		
+		
+		</div>
+		
+		<div id="loan_info"> <!-- loan info will be displayed here -->
+			<div id="dialog" title="Basic dialog">
+			<p id='amt'></p>
+			<p id='numMonths'></p>
+			<p id='interestRate'></p>
+			<p id='extraPayment'></p>
+		 </div>
+		</div>
+		
+		
+		
+		<div id="table_header">
+		
+			<table cellpadding="15" >
+				<tr>
+					<td width="30" align="center"><b>Pmt</b></td>
+					<td width="60" align="center"><b>Payment</b></td>
+					<td width="60" align="center"><b>Principal</b></td>
+					<td width="60" align="center"><b>Interest</b></td>
+					<td width="85" align="center"><b>Interest Paid</b></td>
+					<td width="70" align="center"><b>Balance</b></td>
+				</tr>	
+			</table>
+			
+		</div>
+		
+		
+		
+		<div id="table" class="table_info">
+			   
+		</div>
+	
+	
+	
+	</div>
 
-    </div>
 </main>
+    
+    
+    
+		
+		
+
+		
+      
+  
+
  <!--------------footer section------------------>
  <footer class="footer mt-auto py-3">
     <div class="container-fluid ">
